@@ -28,3 +28,18 @@
 
 // console.log(isSomeOver18);
 // console.log(isAllOver18);
+
+//! Array.push() and Array.unshift()
+// These are methods to add elements to an array.
+
+// push() adds one or more elements to the end of an array.
+// unshift() adds one or more elements to the beginning of an array.
+// Syntax:
+// javascript
+// Copy code
+// let arr = [1, 2, 3];
+// arr.push(4);  // Adds 4 to the end
+// console.log(arr);  // Output: [1, 2, 3, 4]
+
+// arr.unshift(0);  // Adds 0 to the beginning
+// console.log(arr);  // Output: [0, 1, 2, 3, 4]

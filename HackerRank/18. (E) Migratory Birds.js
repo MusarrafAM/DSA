@@ -32,6 +32,9 @@
 function migratoryBirds(arr) {
   // Create a frequency array where the index corresponds to bird type
   let frequency = new Array(6).fill(0); // Assuming bird types are between 1 and 5 (inclusive)
+  //   since array index starting from 0, we cant create 5, if create 5 we will ony det index upto 4 not the 5th,
+  //   thats why we create 6 element in the array so we can get the 1st and 5th element
+  //   we wont use 0th index element,it will we 0 forever.
 
   // Count the occurrences of each bird type
   arr.forEach((bird) => {
