@@ -43,3 +43,22 @@
 
 // arr.unshift(0);  // Adds 0 to the beginning
 // console.log(arr);  // Output: [0, 1, 2, 3, 4]
+
+//! Array.find()    is designed specifically to return a single element that meets a condition.
+
+//* EG - 1
+// const users = [
+//   { id: 1, name: "Alice" },
+//   { id: 2, name: "Bob" },
+//   { id: 3, name: "Charlie" },
+// ];
+
+// const user = users.find((user) => user.id === 2);
+
+// console.log(user); // Output: { id: 2, name: 'Bob' }
+
+//* EG - 2
+// const numbers = [3, 7, 8, 10, 15];
+// const firstEven = numbers.find(num => num % 2 === 0); return the first even number.
+
+// console.log(firstEven); // Output: 8
