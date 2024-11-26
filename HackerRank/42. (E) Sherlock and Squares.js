@@ -8,3 +8,4 @@ function squares(a, b) {
 
   return endSquareNumber - startingSquareNumber + 1;
 }
+  
