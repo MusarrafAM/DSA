@@ -1,4 +1,5 @@
-//! Noraml way
+//! One of the best problem many time failed t do this. so do this with again
+//! Normal way
 
 function kangaroo(x1, v1, x2, v2) {
   // Write your code here
