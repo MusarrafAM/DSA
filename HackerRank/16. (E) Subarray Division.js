@@ -1,4 +1,5 @@
 //! Recently completed it using 2 pointers sliding window (Did it on the first run - felt awesome)
+//! When you complete this on first it will feel amazing.
 function birthday(s, d, m) {
   // Write your code here
   // length = m
