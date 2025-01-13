@@ -1,3 +1,5 @@
+//! Very Very Important Do this frequently
+
 //! My initial Solution took so much time cause had to learn object iteration.
 
 // function migratoryBirds(arr) {
@@ -56,4 +58,17 @@ function migratoryBirds(arr) {
   }
 
   return birdTypeWithMaxFrequency;
+}
+
+//! Solution 3 with just list
+function migratoryBirds(arr) {
+  // Write your code here
+
+  const birds = [0, 0, 0, 0, 0];
+
+  arr.forEach((id) => {
+    birds[id - 1]++;
+  });
+
+  return birds.indexOf(Math.max(...birds)) + 1;
 }
