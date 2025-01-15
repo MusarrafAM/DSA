@@ -1,4 +1,4 @@
-//! Optimized Solution using the Set - O(n)
+//! Optimized Solution using the Set - O(n) - Best Solution
 // function sockMerchant(n, ar) {
 //   // Write your code here
 //   let parisCount = 0;
@@ -14,6 +14,27 @@
 //   });
 
 //   return parisCount;
+// }
+
+// Checking if tempArr.includes(ar[i]) and filtering items takes O(n) for each operation. In the worst case, this makes the overall complexity O(n²)
+// very simple and efficient solution just using array
+// function sockMerchant(n, ar) {
+//     // Write your code here
+//     let numOfPairs = 0
+//     let tempArr = []
+
+//     for(let i=0; i<n; i++){
+//         if(tempArr.includes(ar[i])){
+//             numOfPairs++
+//             //remove item from array
+//             tempArr = tempArr.filter((item)=>item !== ar[i])
+
+//         }else{
+//             tempArr.push(ar[i])
+//         }
+//     }
+
+//     return numOfPairs
 // }
 
 //! why set instead of Array/list   (Very Important Read it.)
@@ -54,27 +75,3 @@
 // removing an element (delete) are faster (O(1) on average) in a Set than in an
 // array (where they would typically be O(n)). Using a Set also handles uniqueness for you,
 // which simplifies the logic when you’re looking for matching pairs.
-
-//! Noraml Solution using a dictionary O(2n)
-// function sockMerchant(n, ar) {
-// Write your code here
-
-//   let numOfPairs = 0;
-//   let dictOfsocks = {};
-
-//   ar.forEach((item) => {
-//     if (dictOfsocks[item]) {
-//       dictOfsocks[item]++;
-//     } else {
-//       dictOfsocks[item] = 1;
-//     }
-//   });
-
-//   let objectValues = Object.values(dictOfsocks);
-
-//   objectValues.forEach((val) => {
-//     numOfPairs += Math.floor(val / 2);
-//   });
-
-//   return numOfPairs;
-// }
