@@ -1,3 +1,4 @@
+// I could not complete it in first try so do again.
 //If have time Try to solve using 2 pointers after sorting the array.
 
 function pickingNumbers(a) {

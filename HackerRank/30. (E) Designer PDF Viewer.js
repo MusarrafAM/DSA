@@ -1,4 +1,4 @@
-
+// ! try to complete this in charCodeAt method, it will be very use-full for future problem solving.
 // Method 1 - Normal Way
 
 function designerPdfViewer(h, word) {

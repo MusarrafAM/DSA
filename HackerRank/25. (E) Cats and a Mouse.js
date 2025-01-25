@@ -1,3 +1,5 @@
+// Try once more confused a bit the figured it out
+
 function catAndMouse(x, y, z) {
   let catADifference = Math.abs(z - x);
   let catBDifference = Math.abs(z - y);
