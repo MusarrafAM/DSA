@@ -15,6 +15,24 @@ function circularArrayRotation(a, k, queries) {
   return queries.map((queryIndex) => a[queryIndex]);
 }
 
+//! Method - 01 Simplified
+// function circularArrayRotation(a, k, queries) {
+//   // Write your code here
+
+//   for(let i=0; i<k; i++){
+//       let lastValue = a.pop()
+//       a.unshift(lastValue)
+//   }
+
+//   let answer = []
+//   queries.forEach((q)=>{
+//       answer.push(a[q])
+//   })
+
+//   return answer
+
+// }
+
 //! Method - 02 Hard way Regular method using modular
 // function circularArrayRotation(a, k, queries) {
 //   // Write your code here

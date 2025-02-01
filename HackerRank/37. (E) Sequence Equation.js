@@ -1,3 +1,5 @@
+// Question not clear but able to find the answer every time.
+
 function permutationEquation(p) {
   // Write your code here
   let yArray = [];

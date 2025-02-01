@@ -1,3 +1,4 @@
+//! Do this again simple concept of BonInt and factorial
 // factorial of 5! => 5 * 4 * 3 * 2 * 1
 // size of each data type for numbers
 // byte = -128 -> 127
