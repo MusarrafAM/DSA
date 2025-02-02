@@ -1,30 +1,27 @@
+//! Did not complete this question kind of hard for me.
+//! Try this again
+
 function appendAndDelete(s, t, k) {
-  let sSize = s.length;
-  let tSize = t.length;
-  let totalTry = k;
-  let initialLetterMatchCount = 0;
+  let commonLength = 0;
 
-  // Find the common prefix length
-  let n = 0;
-  while (n < sSize && n < tSize && s[n] === t[n]) {
-    initialLetterMatchCount++;
-    n++;
+  // Find the longest common prefix
+  for (let i = 0; i < Math.min(s.length, t.length); i++) {
+    if (s[i] === t[i]) {
+      commonLength++;
+    } else {
+      break;
+    }
   }
 
-  // Calculate the remaining characters to delete or append
-  let sRemaining = sSize - initialLetterMatchCount;
-  let tRemaining = tSize - initialLetterMatchCount;
-  let requiredChanges = sRemaining + tRemaining;
+  // Calculate the minimum operations needed
+  let minOperations = s.length - commonLength + (t.length - commonLength);
 
-  // Check if it's possible to transform within k operations
-  if (totalTry >= requiredChanges && (totalTry - requiredChanges) % 2 === 0) {
+  // Check if the operation is possible
+  if (minOperations > k) {
+    return "No";
+  } else if ((k - minOperations) % 2 === 0 || k >= s.length + t.length) {
     return "Yes";
+  } else {
+    return "No";
   }
-
-  // Check if we can delete and recreate strings with excessive k
-  if (totalTry >= sSize + tSize) {
-    return "Yes";
-  }
-
-  return "No";
 }

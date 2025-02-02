@@ -1,4 +1,5 @@
 // if we try using for loop it will exceed the time limit
+//! Do this again
 
 function squares(a, b) {
   // Write your code here
@@ -8,4 +9,3 @@ function squares(a, b) {
 
   return endSquareNumber - startingSquareNumber + 1;
 }
-  
