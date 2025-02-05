@@ -1,28 +1,16 @@
+//! Did not complete on first try
+// Do this again and again
+
 function cutTheSticks(arr) {
-    // Write your code here
-    let curLength = arr.length
-    let shortestStick = Math.min(...arr)
-    
-    let numOfSticksInEachIteration = [curLength]
-    
-    
-    do{
-        let newArr = arr.map((item)=> item - shortestStick).filter((item)=> item > 0 )
-        arr = newArr;
-        
-        if(arr.length > 0){
-            numOfSticksInEachIteration.push(arr.length)
-            shortestStick = Math.min(...arr)
+  // Write your code here
 
-        }
-        curLength = arr.length
-        
-        
-    }
-    
-    while(curLength > 0)
-        
-    
-    return numOfSticksInEachIteration
+  let numOfStickInEachIteration = [];
 
+  while (arr.length > 0) {
+    numOfStickInEachIteration.push(arr.length);
+    let shortestStick = Math.min(...arr);
+    arr = arr.map((stick) => stick - shortestStick).filter((stick) => stick > 0);
+  }
+
+  return numOfStickInEachIteration;
 }
