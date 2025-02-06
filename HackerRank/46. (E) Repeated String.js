@@ -1,3 +1,5 @@
+// Good one, Completed one first try.
+
 function repeatedString(s, n) {
   // Write your code here
   let totalCountOfA = 0;

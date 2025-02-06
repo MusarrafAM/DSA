@@ -1,3 +1,6 @@
+//! Kind of hard question
+// Did not completed it on first try.
+
 function nonDivisibleSubset(k, s) {
   // Step 1: Create a frequency array to count remainders
   const remainderCounts = Array(k).fill(0);
