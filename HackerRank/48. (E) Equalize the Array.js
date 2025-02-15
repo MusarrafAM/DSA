@@ -1,3 +1,5 @@
+// Complete on First Try
+
 function equalizeArray(arr) {
   // Step 1: Create a frequency map to count occurrences of each element
   let freqMap = {};

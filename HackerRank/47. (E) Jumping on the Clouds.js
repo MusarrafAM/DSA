@@ -1,3 +1,5 @@
+//! Little tricky
+
 function jumpingOnClouds(c) {
   // Write your code here
   let minNumOfJumpsReq = 0;
