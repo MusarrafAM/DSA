@@ -1,4 +1,5 @@
 // Complete on First Try
+//! Good question Try Again
 
 function equalizeArray(arr) {
   // Step 1: Create a frequency map to count occurrences of each element
