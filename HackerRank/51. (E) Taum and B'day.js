@@ -1,13 +1,11 @@
 //! This won't pass hacker rank's 2 test case bcs of large input, so we have done the working solution in method 2
 // function taumBday(b, w, bc, wc, z) {
-//   // Calculate the minimum cost for black and white gifts
-//   const blackCost = Math.min(bc, wc + z); // Cost of black gift
-//   const whiteCost = Math.min(wc, bc + z); // Cost of white gift
+//   // Determine the effective costs
+//   let effectiveBlackCost = Math.min(bc, wc + z);
+//   let effectiveWhiteCost = Math.min(wc, bc + z);
 
-//   // Total cost
-//   const totalCost = b * blackCost + w * whiteCost;
-
-//   return totalCost;
+//   // Calculate the minimum total cost
+//   return (b * effectiveBlackCost) + (w * effectiveWhiteCost);
 // }
 
 //! Method 2  to handle large numbers
