@@ -1,3 +1,5 @@
+// ! Didn't complete on first try try again. (Understand slice better.)
+
 function kaprekarNumbers(p, q) {
   let kaprekarNumbers = [];
 
