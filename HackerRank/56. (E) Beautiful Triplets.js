@@ -1,4 +1,6 @@
 //! Good question to understand multiple nested loops to check all the combinations.
+// This is a brute force method with a time complexity of O(nlogn +  n3)
+// ignore nlogn so the time complexity is n3
 
 function beautifulTriplets(d, arr) {
   // Write your code here
