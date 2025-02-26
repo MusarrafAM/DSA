@@ -9,14 +9,17 @@ function howManyGames(p, d, m, s) {
     s -= currentPrice;
     gamesCount++;
 
-    if (currentPrice > m) {
-      currentPrice -= d;
-    } else {
-      currentPrice = m;
-    }
+    // for some reason below if else not working as expected in hacker rank test cases.
+    // SO, Whenever you want to fix a max value while decreasing / increasing it always use Mat.max with 2 arg.
+    // if (currentPrice > m) {
+    //   currentPrice -= d;
+    // } else {
+    //   currentPrice = m;
+    // }
 
-    //! Below one one do the above if else work
-    // currentPrice = Math.max(currentPrice - d, m);
+    // Ensure price doesn't drop below m
+    // when currentPrice - d reduce below m, Math.max check both  currentPrice - d and m so it will choose m.
+    currentPrice = Math.max(currentPrice - d, m);
   }
 
   return gamesCount;
