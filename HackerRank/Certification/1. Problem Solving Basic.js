@@ -62,10 +62,3 @@ function minTime(files, numCores, limit) {
 
   return ans;
 }
-
-// Example usage:
-let files = [4, 1, 3, 2, 8];
-let numCores = 4;
-let limit = 1;
-
-console.log(minTime(files, numCores, limit)); // Output: 12
