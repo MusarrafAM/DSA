@@ -1,4 +1,4 @@
-// Same question asked in the wealthOs SE Interview
+//! Same question asked in the wealthOs SE Interview
 
 function gradingStudents(grades) {
   // Write your code here
