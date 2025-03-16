@@ -71,3 +71,15 @@ function migratoryBirds(arr) {
 
   return birds.indexOf(Math.max(...birds)) + 1;
 }
+
+//! Solution 4 with new Array creation. = So Simple.
+function migratoryBirds(arr) {
+  // Write your code here
+  const birdsArr = new Array(6).fill(0);
+
+  arr.forEach((birdId) => {
+    birdsArr[birdId]++;
+  });
+
+  return birdsArr.indexOf(Math.max(...birdsArr));
+}
