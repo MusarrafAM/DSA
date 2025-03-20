@@ -1,3 +1,25 @@
+//! my new solution using a dictionary this one also got time complexity of O(n)
+function sockMerchant(n, ar) {
+  // Write your code here
+
+  let shoeDict = {};
+  for (let i = 0; i < n; i++) {
+    if (shoeDict[ar[i]]) {
+      shoeDict[ar[i]]++;
+    } else {
+      shoeDict[ar[i]] = 1;
+    }
+  }
+
+  let values = Object.values(shoeDict);
+
+  let numOfPairs = values
+    .map((item) => Math.floor(item / 2))
+    .reduce((acc, curr) => acc + curr);
+
+  return numOfPairs;
+}
+
 //! Optimized Solution using the Set - O(n) - Best Solution
 // function sockMerchant(n, ar) {
 //   // Write your code here
