@@ -1,4 +1,4 @@
-//! Did not complete this question kind of hard for me.
+//! Did not complete this question kind of hard for me. I think its more like a medium question.
 //! Try this again
 
 function appendAndDelete(s, t, k) {
