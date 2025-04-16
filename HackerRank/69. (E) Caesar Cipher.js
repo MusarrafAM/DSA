@@ -1,4 +1,4 @@
-//! Very Very Important
+//! Very Very Important DO this again and again.
 
 function caesarCipher(s, k) {
   // Write your code here
@@ -9,32 +9,31 @@ function caesarCipher(s, k) {
 
   // if k is more than 26
   k = k % 26;
-  let encryptedString = "";
+  let cipherText = "";
 
-  s.split("").forEach((letter) => {
-    let askiCode = letter.charCodeAt(0);
-    if (askiCode >= 65 && askiCode <= 90) {
-      // Capital Letter
-      askiCode += k;
-      if (askiCode > 90) {
-        let extra = askiCode - 90;
-        askiCode = 64 + extra;
+  for (let i = 0; i < s.length; i++) {
+    let charCode = s[i].charCodeAt();
+
+    // small
+    if (charCode >= 97 && charCode <= 122) {
+      let cipherCode = charCode + k;
+      if (cipherCode > 122) {
+        cipherCode = cipherCode - 26;
       }
-      let newString = String.fromCharCode(askiCode);
-      encryptedString += newString;
-    } else if (askiCode >= 97 && askiCode <= 122) {
-      // small letter
-      askiCode += k;
-      if (askiCode > 122) {
-        let extra = askiCode - 122;
-        askiCode = 96 + extra;
-      }
-      let newString = String.fromCharCode(askiCode);
-      encryptedString += newString;
-    } else {
-      encryptedString += letter;
+      cipherText += String.fromCharCode(cipherCode);
     }
-  });
 
-  return encryptedString;
+    // Capital
+    else if (charCode >= 65 && charCode <= 90) {
+      let cipherCode = charCode + k;
+      if (cipherCode > 90) {
+        cipherCode = cipherCode - 26;
+      }
+      cipherText += String.fromCharCode(cipherCode);
+    } else {
+      cipherText += s[i];
+    }
+  }
+
+  return cipherText;
 }

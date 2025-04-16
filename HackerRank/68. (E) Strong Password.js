@@ -1,5 +1,7 @@
 // ! Very important Work on this again and again
 
+// Best to recall the incudes and array methods like some
+
 function minimumNumber(n, password) {
   // Return the minimum number of characters to make the password strong
   // length = 6
