@@ -16,7 +16,7 @@ function fairRations(B) {
     return "NO";
   }
 
-  for (let i = 0; i < B.length; i++) {
+  for (let i = 0; i < B.length-1; i++) {
     // isOdd
     if (B[i] % 2 !== 0) {
       B[i] += 1;
