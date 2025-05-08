@@ -17,12 +17,13 @@ function minimumAbsoluteDifference(arr) {
   return minDiff;
 }
 
+// Below is inefficient always go with the first try. if didn't work give this nested loop a try.
 //! using double for loop
 // function minimumAbsoluteDifference(arr) {
 //   // Write your code here
-  
+
 //   let minDif = Infinity
-  
+
 //   for(let i=0; i<arr.length; i++){
 //       for(let j=i+1; j<arr.length; j++){
 //           let dif = Math.abs(arr[i] - arr[j])
@@ -31,7 +32,7 @@ function minimumAbsoluteDifference(arr) {
 //           }
 //       }
 //   }
-  
+
 //   return minDif
 
 // }
