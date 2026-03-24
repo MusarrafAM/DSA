@@ -56,6 +56,40 @@ const doubled = nums.map((num) => num * 2);
 console.log(doubled); // [2, 4, 6, 8]
 console.log(nums); // original unchanged
 
+//! forEach()
+// Loops through array and performs an action
+// Returns: undefined (NO return value)
+// Does NOT create a new array
+
+const nums4 = [1, 2, 3];
+
+nums4.forEach((num) => {
+  console.log(num * 2);
+});
+
+// NOTE:
+// - Used only for iteration (side effects)
+// - Cannot break or return values
+
+//! map() vs forEach() ⭐
+
+// map → returns NEW array (used for transformation)
+const mapped = nums4.map((num) => num * 2);
+console.log(mapped); // [2, 4, 6]
+
+// forEach → just loops (no return)
+const result = nums4.forEach((num) => num * 2);
+console.log(result); // undefined
+
+//! Example: Bad vs Good
+
+// ❌ Bad (using forEach to transform)
+let temp = [];
+nums4.forEach((num) => temp.push(num * 2));
+
+// ✅ Good (use map)
+const better = nums4.map((num) => num * 2);
+
 //! filter()
 // Returns NEW array with elements that match condition
 
@@ -131,6 +165,10 @@ console.log(arr3); // original unchanged
 //! ==============================
 
 // ⭐ map, filter, reduce → MOST IMPORTANT
+
+// ⭐ map vs forEach
+// map     → returns new array
+// forEach → no return (just loop)
 
 // ⭐ splice vs slice
 // splice → MUTATES original array
