@@ -141,7 +141,7 @@ console.log(firstEvenNum); // 8
 const allEvenNums = numbers3.filter((num) => num % 2 === 0);
 console.log(allEvenNums); // [8, 10]
 
-//! splice() ⭐
+//! splice() ⭐ == splice(start, count) == count-based (how many to remove)
 // Add/remove elements (MUTATES original array)
 
 let arr2 = [1, 2, 3, 4, 5];
@@ -150,7 +150,7 @@ arr2.splice(1, 2); // remove 2 elements from index 1
 
 console.log(arr2); // [1, 4, 5]
 
-//! slice()
+//! slice() == slice(start, end) = range-based (end is excluded)
 // Returns part of array (DOES NOT mutate)
 
 const arr3 = [1, 2, 3, 4, 5];
@@ -165,10 +165,6 @@ console.log(arr3); // original unchanged
 //! ==============================
 
 // ⭐ map, filter, reduce → MOST IMPORTANT
-
-// ⭐ map vs forEach
-// map     → returns new array
-// forEach → no return (just loop)
 
 // ⭐ splice vs slice
 // splice → MUTATES original array
