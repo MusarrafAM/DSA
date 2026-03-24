@@ -160,6 +160,30 @@ const subArray = arr3.slice(1, 4);
 console.log(subArray); // [2, 3, 4]
 console.log(arr3); // original unchanged
 
+//! sort()
+// Sorts array elements (mutates original array)
+// By default: converts to strings and sorts lexicographically(like alphabetic order)
+
+let numbers = [10, 3, 25, 7, 1];
+
+numbers.sort(); // default sort (lexicographic)
+console.log(numbers); // [1, 10, 25, 3, 7]  ❌ not numeric
+
+// ✅ Correct numeric sort
+numbers = [10, 3, 25, 7, 1];
+numbers.sort((a, b) => a - b); // ascending
+console.log(numbers); // [1, 3, 7, 10, 25]
+
+numbers.sort((a, b) => b - a); // descending
+console.log(numbers); // [25, 10, 7, 3, 1]
+
+//! reverse()
+// Reverses array in place (mutates original array)
+
+let array = [1, 2, 3, 4, 5];
+array.reverse();
+console.log(array); // [5, 4, 3, 2, 1]
+
 //! ==============================
 //! 💡 Interview Pro Tips
 //! ==============================
