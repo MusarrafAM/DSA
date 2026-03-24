@@ -1,64 +1,161 @@
-//! The every() method checks if all array values pass a test.
-// it returns a boolean
+//! ==============================
+//! JavaScript Array Methods Notes
+//! ==============================
 
-// const a = [2, 4, 6, 8, 10];
-// const b = [2, 5, 6, 8, 10]; // Contains an odd number
+//! every()
+// Checks if ALL elements pass a condition
+// Returns: boolean
 
-// let isAllEven = a.every((num) => num % 2 == 0);     // true
-// let isAllEven = b.every((num) => num % 2 == 0);     // false
+const a = [2, 4, 6, 8, 10];
+const b = [2, 5, 6, 8, 10];
 
-// console.log(isAllEven);
+const isAllEvenA = a.every((num) => num % 2 === 0); // true
+const isAllEvenB = b.every((num) => num % 2 === 0); // false
 
-//! The some() method checks if some array values pass a test.
-// it returns a boolean
+console.log(isAllEvenA);
+console.log(isAllEvenB);
 
-// const a = [2, 4, 6, 8, 10];
-// const b = [2, 5, 6, 8, 10]; // Contains an odd number
+//! some()
+// Checks if AT LEAST ONE element passes a condition
+// Returns: boolean
 
-// let isAnyOdd = a.some((num) => num % 2 == 1);     // false
-// let isAnyOdd = b.some((num) => num % 2 == 1);     // true
+const isAnyOddA = a.some((num) => num % 2 === 1); // false
+const isAnyOddB = b.some((num) => num % 2 === 1); // true
 
-// console.log(isAnyOdd);
+console.log(isAnyOddA);
+console.log(isAnyOddB);
 
-// Eg to understand every and some
-// const numbers = [45, 4, 9, 16, 25];
+//! Example: every() vs some()
 
-// let isSomeOver18 = numbers.some((num) => num > 18);        // true
-// let isAllOver18 = numbers.every((num) => num > 18);      // false
+const numbers1 = [45, 4, 9, 16, 25];
 
-// console.log(isSomeOver18);
-// console.log(isAllOver18);
+const isSomeOver18 = numbers1.some((num) => num > 18); // true
+const isAllOver18 = numbers1.every((num) => num > 18); // false
 
-//! Array.push() and Array.unshift()
-// These are methods to add elements to an array.
+console.log(isSomeOver18);
+console.log(isAllOver18);
 
-// push() adds one or more elements to the end of an array.
-// unshift() adds one or more elements to the beginning of an array.
-// Syntax:
-// javascript
-// Copy code
-// let arr = [1, 2, 3];
-// arr.push(4);  // Adds 4 to the end
-// console.log(arr);  // Output: [1, 2, 3, 4]
+//! push() and unshift()
+// Add elements to array (MUTATE original array)
 
-// arr.unshift(0);  // Adds 0 to the beginning
-// console.log(arr);  // Output: [0, 1, 2, 3, 4]
+let arr1 = [1, 2, 3];
 
-//! Array.find()    is designed specifically to return a single element that meets a condition.
+arr1.push(4); // add to END
+console.log(arr1); // [1, 2, 3, 4]
 
-//* EG - 1
-// const users = [
-//   { id: 1, name: "Alice" },
-//   { id: 2, name: "Bob" },
-//   { id: 3, name: "Charlie" },
-// ];
+arr1.unshift(0); // add to START
+console.log(arr1); // [0, 1, 2, 3, 4]
 
-// const user = users.find((user) => user.id === 2);
+//! map()
+// Transforms each element → returns NEW array
 
-// console.log(user); // Output: { id: 2, name: 'Bob' }
+const nums = [1, 2, 3, 4];
 
-//* EG - 2
-// const numbers = [3, 7, 8, 10, 15];
-// const firstEven = numbers.find(num => num % 2 === 0); return the first even number.
+const doubled = nums.map((num) => num * 2);
 
-// console.log(firstEven); // Output: 8
+console.log(doubled); // [2, 4, 6, 8]
+console.log(nums); // original unchanged
+
+//! filter()
+// Returns NEW array with elements that match condition
+
+const evens = nums.filter((num) => num % 2 === 0);
+
+console.log(evens); // [2, 4]
+
+//! reduce() ⭐
+// Reduces array to a SINGLE value
+
+const sum = nums.reduce((acc, curr) => acc + curr, 0);
+
+console.log(sum); // 10
+
+// acc = accumulator
+// curr = current value
+
+//! find()
+// Returns FIRST element that matches condition
+// If none → undefined
+
+const users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+  { id: 3, name: "Charlie" },
+];
+
+const user = users.find((u) => u.id === 2);
+
+console.log(user); // { id: 2, name: "Bob" }
+
+//! Another find() example
+
+const numbers2 = [3, 7, 8, 10, 15];
+
+const firstEven = numbers2.find((num) => num % 2 === 0);
+
+console.log(firstEven); // 8
+
+//! find() vs filter()
+
+const numbers3 = [1, 3, 5, 8, 10];
+
+// find → FIRST match
+const firstEvenNum = numbers3.find((num) => num % 2 === 0);
+console.log(firstEvenNum); // 8
+
+// filter → ALL matches
+const allEvenNums = numbers3.filter((num) => num % 2 === 0);
+console.log(allEvenNums); // [8, 10]
+
+//! splice() ⭐
+// Add/remove elements (MUTATES original array)
+
+let arr2 = [1, 2, 3, 4, 5];
+
+arr2.splice(1, 2); // remove 2 elements from index 1
+
+console.log(arr2); // [1, 4, 5]
+
+//! slice()
+// Returns part of array (DOES NOT mutate)
+
+const arr3 = [1, 2, 3, 4, 5];
+
+const subArray = arr3.slice(1, 4);
+
+console.log(subArray); // [2, 3, 4]
+console.log(arr3); // original unchanged
+
+//! ==============================
+//! 💡 Interview Pro Tips
+//! ==============================
+
+// ⭐ map, filter, reduce → MOST IMPORTANT
+
+// ⭐ splice vs slice
+// splice → MUTATES original array
+// slice  → DOES NOT mutate (returns new array)
+
+// ⭐ find vs filter
+// find   → first match
+// filter → all matches
+
+// ⭐ Mutating methods:
+// push, pop, shift, unshift, splice, sort, reverse
+
+// ⭐ Non-mutating methods:
+// map, filter, reduce, slice, find, some, every
+
+//! ==============================
+//! 🧠 Quick Memory Tricks
+//! ==============================
+
+// map    → transform
+// filter → select
+// reduce → combine
+// find   → first match
+// splice → change original
+// slice  → copy part
+
+// every → ALL must pass
+// some  → AT LEAST ONE must pass
