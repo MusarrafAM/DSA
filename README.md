@@ -86,9 +86,3 @@ Consistently solving problems and updating the repository with:
 This is a personal learning repository, but suggestions and improvements are always welcome!
 
 ---
-
-If you want, I can also:
-
-- Make it **more minimal (1-screen GitHub style)**
-- Add **badges (HackerRank, GitHub stats)**
-- Or tailor it specifically for **recruiters (very impactful version)** 🚀
